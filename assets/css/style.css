@@ -1,0 +1,188 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* Iniciación de la propiedad "display" para etiquetas de HTML5 para navegadores antiguos */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  display: grid;
+  grid-template-columns: 15.625rem 16.125rem auto;
+  line-height: 1.65rem;
+  width: 100vw;
+  height: 100vh; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.menu {
+  display: inline-block;
+  height: 100%;
+  background-color: #5d6e6a; }
+  .menu__list {
+    padding-top: 1.375rem; }
+    .menu__list .btn {
+      color: #fff;
+      border: none;
+      height: 2.3125rem;
+      width: 100%;
+      font-family: 'Encode Sans';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1rem;
+      text-decoration: none;
+      background-color: #5d6e6a;
+      text-align: left;
+      padding-left: 0.9375rem; }
+      .menu__list .btn:hover {
+        background-color: #fff;
+        color: #5d6e6a; }
+      .menu__list .btn__allcontacts, .menu__list .btn__favorites {
+        margin-bottom: 0.625rem; }
+
+.contact {
+  height: 100%;
+  background-color: #fff;
+  padding: 1.4375rem 1.0625rem;
+  border-top: none;
+  border-right: 1px solid #dadada; }
+  .contact__search {
+    display: flex;
+    flex-wrap: wrap;
+    width: 13.9375rem;
+    height: 2.3125rem; }
+    .contact__search input {
+      width: 180px;
+      height: 2.25rem;
+      margin: 0;
+      border-radius: 3.125rem 0 0 3.125rem;
+      padding: 0 1.0625rem;
+      border: 1px solid #dadada;
+      border-right: none;
+      font-family: 'Encode Sans';
+      outline: none; }
+    .contact__search button {
+      width: 43px;
+      height: 2.25rem;
+      margin: 0;
+      border-radius: 0 3.125rem 3.125rem 0;
+      background-color: #fff;
+      border: 1px solid #dadada;
+      padding: 0;
+      border-left: none;
+      outline: none; }
+      .contact__search button:hover {
+        background-color: #f2f2f2; }
+
+card {
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: 9rem 7.625rem auto; }
+  card .cardname {
+    border-bottom: 1px solid #dadada; }
+    card .cardname .box {
+      display: flex;
+      height: 4.25rem;
+      width: 100%;
+      margin: 2.375rem 38.75rem 2.375rem 2.9375rem;
+      font-family: 'Encode Sans'; }
+      card .cardname .box__letter {
+        display: block;
+        width: 4.25rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 300;
+        font-size: 2.75rem;
+        background-color: red;
+        border-radius: 3.125rem;
+        color: #fff; }
+      card .cardname .box__titles {
+        display: inline;
+        margin-left: 1.625rem; }
+        card .cardname .box__titles--h1 {
+          width: 100%;
+          height: 2.5625rem;
+          font-weight: 300;
+          font-size: 2.0625rem; }
+        card .cardname .box__titles--h2 {
+          width: 2.9375rem;
+          height: 1.125rem;
+          font-size: 0.875rem;
+          margin-top: -0.75rem;
+          color: #999999; }
+  card .nameinfo {
+    border-bottom: 1px solid #dadada; }
+    card .nameinfo .boxinfo {
+      display: block;
+      width: 100%;
+      height: 4rem;
+      margin: 1.75rem auto 1.875rem 3rem; }
+      card .nameinfo .boxinfo__mail {
+        width: auto; }
+        card .nameinfo .boxinfo__mail svg {
+          margin-right: 1.125rem; }
+        card .nameinfo .boxinfo__mail a {
+          text-decoration: none; }
+      card .nameinfo .boxinfo__number {
+        width: auto; }
+        card .nameinfo .boxinfo__number svg {
+          margin-right: 1.125rem; }
+  card .card__edit {
+    margin-top: 2.3125rem;
+    margin-left: 3.9375rem; }
+    card .card__edit .btn--edit {
+      width: 3.75rem;
+      height: 1.75rem;
+      background-color: #eeeeee;
+      border: none;
+      font-size: 0.875rem;
+      font-family: 'Encode Sans';
+      color: #4a4a4a; }
+    card .card__edit #btn--plus {
+      position: absolute;
+      width: 2.625rem;
+      height: 2.625rem;
+      bottom: 1.875rem;
+      right: 1.875rem;
+      background-color: #0bd4a4;
+      border: 0;
+      border-radius: 0.25rem; }
+
+/*# sourceMappingURL=../../sass/sourcemap/style.css.map */

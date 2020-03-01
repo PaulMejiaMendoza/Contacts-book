@@ -1,0 +1,34 @@
+.menu {
+  display: inline-block;
+  height: 100%;
+  background-color:#5d6e6a;
+
+  &__list{
+    padding-top: rem(22px);
+    
+
+    .btn{
+      color: #fff;
+      border: none;
+      height: rem(37px);
+      width: 100%;
+      font-family: 'Encode Sans';
+      font-style: normal;
+      font-weight: normal;
+      font-size: rem(16px);
+      text-decoration: none;
+      background-color: #5d6e6a;
+      text-align: left;
+      padding-left: rem(15px);
+      
+      &:hover{
+        background-color: #fff;
+        color: #5d6e6a;
+      }
+
+      &__allcontacts, &__favorites{
+        margin-bottom: rem(10px);
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+card{
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: rem(144px 122px auto);
+
+  .cardname{
+    
+    border-bottom: 1px solid #dadada;
+
+    .box{
+      display: flex;
+      height: rem(68px);
+      width: 100%;
+      margin: rem(38px 620px 38px 47px);
+      font-family: 'Encode Sans';
+
+      &__letter{
+        display: block;
+        width: rem(68px);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 300;
+        font-size: rem(44px);
+        background-color: red;
+        border-radius: rem(50px);
+        color: #fff;
+      }
+      &__titles {
+        display: inline;
+        margin-left: rem(26px);
+          &--h1{
+            width: 100%;
+            height: rem(41px);
+            font-weight: 300;
+            font-size: rem(33px);
+          }
+
+          &--h2{
+            width: rem(47px);
+            height: rem(18px);
+            font-size: rem(14px);
+            margin-top: rem(-12px);
+            color: #999999;
+          }
+        }
+    }
+  }
+
+  .nameinfo {
+    border-bottom: 1px solid #dadada;
+
+    .boxinfo{
+      display: block;
+      width: 100%;
+      height: rem(64px);
+      margin: rem(28px auto 30px 48px);
+
+      &__mail{
+        width: auto;
+        svg{
+          margin-right: rem(18px);
+        }
+        a{
+          text-decoration: none;
+        }
+      }
+
+      &__number{
+        width: auto;
+        svg{
+          margin-right: rem(18px);
+        }
+      }
+    }
+  }
+  
+  .card__edit{
+    margin-top: rem(37px);
+    margin-left: rem(63px);
+    
+
+    .btn--edit{
+      width: rem(60px);
+      height: rem(28px);
+      background-color: #eeeeee;
+      border: none;
+      font-size: rem(14px);
+      font-family: 'Encode Sans';
+      color: #4a4a4a
+    }
+
+    #btn--plus{
+      
+      position: absolute;
+      width: rem(42px);
+      height: rem(42px);
+      bottom: rem(30px);
+      right: rem(30px);
+      background-color: #0bd4a4;
+      border: 0;
+      border-radius: rem(4px);
+    }
+
+  }
+}

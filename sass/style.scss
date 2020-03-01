@@ -1,0 +1,14 @@
+// core
+@import "mixins/rem";
+//fonts
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans&display=swap");
+
+//global
+@import "global/reset";
+@import "global/base";
+
+
+//components
+@import "components/menu";
+@import "components/list";
+@import "components/card";
