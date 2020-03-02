@@ -109,19 +109,19 @@ table {
       .contact__search button:hover {
         background-color: #f2f2f2; }
 
-card {
+.card {
   display: grid;
   overflow: hidden;
   grid-template-rows: 9rem 7.625rem auto; }
-  card .cardname {
+  .card .cardname {
     border-bottom: 1px solid #dadada; }
-    card .cardname .box {
+    .card .cardname .box {
       display: flex;
       height: 4.25rem;
       width: 100%;
       margin: 2.375rem 38.75rem 2.375rem 2.9375rem;
       font-family: 'Encode Sans'; }
-      card .cardname .box__letter {
+      .card .cardname .box__letter {
         display: block;
         width: 4.25rem;
         height: 100%;
@@ -133,41 +133,42 @@ card {
         background-color: red;
         border-radius: 3.125rem;
         color: #fff; }
-      card .cardname .box__titles {
+      .card .cardname .box__titles {
         display: inline;
-        margin-left: 1.625rem; }
-        card .cardname .box__titles--h1 {
+        padding-left: 1.625rem; }
+        .card .cardname .box__titles--h1 {
           width: 100%;
           height: 2.5625rem;
           font-weight: 300;
           font-size: 2.0625rem; }
-        card .cardname .box__titles--h2 {
+        .card .cardname .box__titles--h2 {
           width: 2.9375rem;
           height: 1.125rem;
           font-size: 0.875rem;
-          margin-top: -0.75rem;
+          padding-top: -0.75rem;
           color: #999999; }
-  card .nameinfo {
+  .card .nameinfo {
     border-bottom: 1px solid #dadada; }
-    card .nameinfo .boxinfo {
+    .card .nameinfo .boxinfo {
       display: block;
       width: 100%;
       height: 4rem;
       margin: 1.75rem auto 1.875rem 3rem; }
-      card .nameinfo .boxinfo__mail {
+      .card .nameinfo .boxinfo__mail {
         width: auto; }
-        card .nameinfo .boxinfo__mail svg {
+        .card .nameinfo .boxinfo__mail img {
           margin-right: 1.125rem; }
-        card .nameinfo .boxinfo__mail a {
+        .card .nameinfo .boxinfo__mail a {
           text-decoration: none; }
-      card .nameinfo .boxinfo__number {
+      .card .nameinfo .boxinfo__number {
         width: auto; }
-        card .nameinfo .boxinfo__number svg {
+        .card .nameinfo .boxinfo__number img {
           margin-right: 1.125rem; }
-  card .card__edit {
-    margin-top: 2.3125rem;
-    margin-left: 3.9375rem; }
-    card .card__edit .btn--edit {
+  .card__edit {
+    position: relative;
+    padding-top: 2.3125rem;
+    padding-left: 3.9375rem; }
+    .card__edit .btn--edit {
       width: 3.75rem;
       height: 1.75rem;
       background-color: #eeeeee;
@@ -175,7 +176,7 @@ card {
       font-size: 0.875rem;
       font-family: 'Encode Sans';
       color: #4a4a4a; }
-    card .card__edit #btn--plus {
+    .card__edit #btn--plus {
       position: absolute;
       width: 2.625rem;
       height: 2.625rem;

@@ -1,4 +1,81 @@
-const contacts = [
+// Array.sort() //sirve para ordenar arrays
+const contacts = getContacts().sort((prev, next) =>  prev.name > next.name); //si el prev.name es mayor que el next.name nos da el resultado del array ordenado alfabeticamente
+
+const contactList = document.getElementsByClassName('contact__list')[0]; //este es el <ul> que esta en el DOM
+const cardName = document.getElementsByClassName('cardname')[0];
+
+
+
+// con el bucle for pintamos los contactos en la lista
+contacts.forEach((contact, index) => {       //vamos a recorrer nuestros contactos
+    const name = `${contact.name} ${contact.surname}`;
+    const domContact = createContact(name, index);
+
+    contactList.appendChild(domContact);// DOM <li>nombre</li>
+});
+
+//vamos a crear un evento click a nuestra lista de contactos
+contactList.addEventListener('click', e => {
+  if (e.target.dataset.index) {
+    cardName.appendChild(createBox(contacts[e.target.dataset.index]));
+
+    return cardName
+  }
+})
+
+//con esta funcion creamos los elementos del dom para mostrar la letra grande, el nombre y la categoria.
+function createBox(contactInfo){
+  const box = document.createElement('div');
+  const boxLetter = document.createElement('div')
+  const boxTitles = document.createElement('div');
+  const firstTitle = document.createElement('h1');
+  const secondTitle = document.createElement('h2');
+
+
+
+
+  const boxLetterText = document.createTextNode(contactInfo.name[0]);
+  boxLetter.appendChild(boxLetterText); //agregamos al div 'box__letter' la primera letra del nombre
+
+  const firstTitleText = document.createTextNode(`${contactInfo.name} ${contactInfo.surname}`);
+  firstTitle.appendChild(firstTitleText);  //agregamos al div 'box__titles--h1' el nombre y apellido `${contact.name} ${contact.surname}`
+
+  const secondTitleText = document.createTextNode(contactInfo.group);
+  secondTitle.appendChild(secondTitleText); //agregamos al div 'box__titles--h2' el grupo
+
+  box.setAttribute('class', 'box');
+  boxLetter.setAttribute('class', 'box__letter');
+  boxTitles.setAttribute('class','box__titles'); //con setAttribute le estamos agregando al elemento la clase 'box__titles'en este caso
+  firstTitle.setAttribute('class','box__titles--h1');
+  secondTitle.setAttribute('class', 'box__titles--h2');
+
+
+
+  box.appendChild(boxLetter);
+  box.appendChild(boxTitles);
+  boxTitles.appendChild(firstTitle);
+  boxTitles.appendChild(secondTitle);
+
+  return box
+};
+
+
+// funcion para crear un contacto con una lista desordenada------------------------
+function createContact(name, index) {
+    const contact = document.createElement('li'); //creamos la lista para pintar el array con el nombre y apellido
+    const contactName = document.createTextNode(name);  //aqui vamos a crear el texto con lo que recibamos de name
+    contact.dataset.index = index; //añadimos un identificador data.index a cada elemento del array para poder agarrarlos luego y poder disparar el evento click
+    contact.appendChild(contactName);
+
+    return contact;
+};
+
+
+
+
+
+function getContacts() { 
+    return [
     {
       "name": "Piedad",
       "surname": "Dunfee",
@@ -239,4 +316,6 @@ const contacts = [
       "phone": "607 123 456",
       "group": "amigos"
     }
-  ]
+  ]};
+
+  

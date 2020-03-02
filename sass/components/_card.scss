@@ -1,4 +1,4 @@
-card{
+.card{
   display: grid;
   overflow: hidden;
   grid-template-rows: rem(144px 122px auto);
@@ -29,7 +29,7 @@ card{
       }
       &__titles {
         display: inline;
-        margin-left: rem(26px);
+        padding-left: rem(26px);
           &--h1{
             width: 100%;
             height: rem(41px);
@@ -41,7 +41,7 @@ card{
             width: rem(47px);
             height: rem(18px);
             font-size: rem(14px);
-            margin-top: rem(-12px);
+            padding-top: rem(-12px);
             color: #999999;
           }
         }
@@ -59,7 +59,7 @@ card{
 
       &__mail{
         width: auto;
-        svg{
+        img{
           margin-right: rem(18px);
         }
         a{
@@ -69,16 +69,17 @@ card{
 
       &__number{
         width: auto;
-        svg{
+        img{
           margin-right: rem(18px);
         }
       }
     }
   }
   
-  .card__edit{
-    margin-top: rem(37px);
-    margin-left: rem(63px);
+  &__edit{
+    position: relative;
+    padding-top: rem(37px);
+    padding-left: rem(63px);
     
 
     .btn--edit{
@@ -92,7 +93,6 @@ card{
     }
 
     #btn--plus{
-      
       position: absolute;
       width: rem(42px);
       height: rem(42px);
